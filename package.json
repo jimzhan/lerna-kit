@@ -50,6 +50,7 @@
     "jsonfile": "^4.0.0",
     "shelljs": "^0.8.2",
     "shx": "^0.3.1",
+    "update-pkg": "^1.2.0",
     "validate-npm-package-name": "^3.0.0",
     "write-pkg": "^3.2.0"
   }
