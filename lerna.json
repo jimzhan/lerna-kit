@@ -1,0 +1,11 @@
+{
+  "lerna": "2.11.0",
+  "packages": [
+    "packages/*"
+  ],
+  "version": "independent",
+  "npmClient": "yarn",
+  "useGitVersion": true,
+  "gitVersionPrefix": "v",
+  "version": "0.1.0"
+}
