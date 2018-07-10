@@ -5,8 +5,9 @@ const chalk = require('chalk')
 const inquirer = require('inquirer')
 const assert = require('assert')
 const shell = require('shelljs')
-const write = require('write-pkg')
 const validate = require('is-valid-npm-name')
+const jsonfile = require('jsonfile')
+
 
 const { log } = console
 const basedir = path.resolve(__dirname, '..', 'packages')
@@ -31,11 +32,10 @@ function bootstrap(name) {
   })
   // 2nd iteration to ensure we have all or nothing changed.
   packages.forEach((pkg) => {
-    const folder = getLastSegment(pkg)
-    write(path.join(pkg, 'package.json'), { name: folder }).then(() => {
-      log(`${chalk.green('[lerna-kit]')} ${folder}/package.json updated`)
-    })
+    const name = getLastSegment(pkg)
+    jsonfile.writeFileSync(path.join(pkg, 'package.json'), { name })
   })
+  log(`${chalk.green('[lerna-kit]')}  all folders & package.json updated`)
 }
 
 inquirer
