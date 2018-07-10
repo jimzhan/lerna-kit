@@ -33,7 +33,7 @@ function bootstrap(name) {
   // 2nd iteration to ensure we have all or nothing changed.
   packages.forEach((pkg) => {
     const name = getLastSegment(pkg)
-    jsonfile.writeFileSync(path.join(pkg, 'package.json'), { name })
+    jsonfile.writeFileSync(path.join(pkg, 'package.json'), { name }, { flag: 'a' })
   })
   log(`${chalk.green('[lerna-kit]')}  all folders & package.json updated`)
 }
