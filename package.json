@@ -1,4 +1,6 @@
 {
+  "name": "lerna-kit",
+  "version": "0.1.0",
   "commitlint": {
     "extends": [
       "@commitlint/config-conventional"
