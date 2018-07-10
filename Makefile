@@ -8,6 +8,10 @@ help:
 	@echo "   2. make build   	- build docker image"
 	@echo "   3. make test    	- run test suit"
 
+bootstrap:
+	./bin/bootstrap
+
+
 # incl. hacks for `lerna` based packages
 # https://github.com/node-modules/autod/issues/34
 install:

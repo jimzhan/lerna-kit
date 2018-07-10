@@ -1,0 +1,51 @@
+#!/usr/bin/env node
+const path = require('path')
+const glob = require('glob')
+const chalk = require('chalk')
+const inquirer = require('inquirer')
+const assert = require('assert')
+const shell = require('shelljs')
+const write = require('write-pkg')
+const validate = require('is-valid-npm-name')
+
+const { log } = console
+const basedir = path.resolve(__dirname, '..', 'packages')
+const origin = 'lerna'
+
+/**
+ * Rename package.json#name with the given one & its relevant folder..
+ * @param {String} name - new package name (validate against npm package naming).
+ */
+function bootstrap(name) {
+  const origins = glob.sync(`${basedir}/${origin}*`)
+  const packages = []
+  const getLastSegment = (p) => p.split(path.sep).filter(x => x).slice(-1)[0]
+
+  origins.forEach((pkg) => {
+    const folder = getLastSegment(pkg).replace(origin, name)
+    const validity = validate(folder)
+    assert(validity === true, validity)
+    const abspath = path.join(basedir, folder)
+    packages.push(abspath)
+    shell.mv(pkg, abspath)
+  })
+  // 2nd iteration to ensure we have all or nothing changed.
+  packages.forEach((pkg) => {
+    const folder = getLastSegment(pkg)
+    write(path.join(pkg, 'package.json'), { name: folder }).then(() => {
+      log(`${chalk.green('[lerna-kit]')} ${folder}/package.json updated`)
+    })
+  })
+}
+
+inquirer
+  .prompt([
+    {
+      type: 'input',
+      name: 'name',
+      message: 'Please provide your project name:',
+    },
+  ])
+  .then((answers) => {
+    bootstrap(answers.name)
+  })
