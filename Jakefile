@@ -68,8 +68,6 @@ task('default', function() {
 
 desc('Initialize a new `lerna` project')
 task('init', function() {
-  jake.exec(['npm install'], { printStdout: true })
-
   inquirer
     .prompt([
       {
