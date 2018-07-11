@@ -1,6 +1,6 @@
 {
-  "name": "lerna-ui",
-  "version": "1.0.0",
+  "name": "@lerna/ui",
+  "version": "0.1.0",
   "description": "",
   "main": "index.js",
   "scripts": {
