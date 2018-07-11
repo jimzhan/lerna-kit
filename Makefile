@@ -4,12 +4,10 @@ NAME=lerna-kit
 help:
 	@echo ""
 	@echo "COMMANDS"
-	@echo "   1. make install		- install the cli command"
-	@echo "   2. make build   	- build docker image"
-	@echo "   3. make test    	- run test suit"
+	@echo "   * make init	    - initialize a new project"
 
-bootstrap:
-	./bin/bootstrap
+init:
+	./bin/init
 
 
 # incl. hacks for `lerna` based packages
