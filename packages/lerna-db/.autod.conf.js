@@ -1,4 +1,4 @@
-const { registry } = require('../../.auto.conf.js')
+const { registry } = require('../../.autod.conf.js')
 
 module.exports = Object.assign({
   write: true,
