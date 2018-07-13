@@ -1,0 +1,51 @@
+module.exports = {
+  write: true,
+  prefix: '~',
+  devprefix: '^',
+  dep: [
+    'boom',
+    'convict-register',
+    'chalk',
+    'cross-env',
+    'dotenv',
+    'glob',
+    'graphql',
+    'graphql-import',
+    'graphql-tools',
+    'koa',
+    'koa-bodyparser',
+    'koa-compress',
+    'koa-conditional-get',
+    'koa-csrf',
+    'koa-etag',
+    'koa-graphql',
+    'koa-helmet',
+    'koa-pino-logger',
+    'koa-router',
+    'per-env',
+    'rimraf',
+  ],
+  devdep: [
+    '@commitlint/cli',
+    '@commitlint/config-conventional',
+    'commitizen',
+    'cz-conventional-changelog',
+    'eslint',
+    'eslint-config-airbnb-base',
+    'eslint-plugin-import',
+    'eslint-plugin-jest',
+    'husky',
+    'jest',
+    'lint-staged',
+    'nodemon',
+    'supertest',
+  ],
+  semver: [
+    'eslint@4.19.1',
+  ],
+  /* ------------------------------------------------------------
+   * `lerna` based packages require manual installation via npm registry.
+   * @SEE https://github.com/node-modules/autod/issues/34
+   * ------------------------------------------------------------*/
+  registry: 'https://registry.npm.taobao.org',
+}
