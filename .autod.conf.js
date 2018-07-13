@@ -8,13 +8,8 @@ module.exports = {
     'rimraf',
   ],
   devdep: [
-    /* ------------------------------------------------------------
-     * `lerna` based packages require manual installation for now.
-     * @SEE https://github.com/node-modules/autod/issues/34
-     * ------------------------------------------------------------
     '@commitlint/cli',
     '@commitlint/config-conventional',
-    */
     'commitizen',
     'cz-conventional-changelog',
     'eslint',
@@ -28,4 +23,9 @@ module.exports = {
   semver: [
     'eslint@4.19.1',
   ],
+  /* ------------------------------------------------------------
+   * `lerna` based packages require manual installation via npm registry.
+   * @SEE https://github.com/node-modules/autod/issues/34
+   * ------------------------------------------------------------*/
+  registry: 'https://registry.npm.taobao.org',
 }
