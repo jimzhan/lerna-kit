@@ -5,11 +5,18 @@ module.exports = Object.assign({
   prefix: '~',
   devprefix: '^',
   dep: [
+    'antd',
+    'browserslist',
+    'cross-env',
+    'per-env',
     'react',
+    'react-dom',
+    'react-app-rewired',
+    'react-app-rewire-less',
+    'react-scripts',
+    'rimraf',
   ],
   devdep: [
-  ],
-  semver: [
-    'eslint@4.19.1',
+    'babel-plugin-import',
   ],
 }, { registry })
