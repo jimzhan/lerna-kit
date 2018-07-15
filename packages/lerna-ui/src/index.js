@@ -1,8 +1,16 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { Button } from 'antd'
+import App from './containers/App'
 
-ReactDOM.render(
-  <Button type="primary">Button</Button>,
-  document.getElementById('root'),
-)
+import './styles/global.less'
+
+const ROOT = document.getElementById('root')
+
+const render = () => {
+  ReactDOM.render(
+    <App/>,
+    ROOT
+  )
+}
+
+render()
