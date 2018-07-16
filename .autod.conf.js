@@ -28,4 +28,7 @@ module.exports = {
    * @SEE https://github.com/node-modules/autod/issues/34
    * ------------------------------------------------------------*/
   registry: 'https://registry.npm.taobao.org',
+  exclude: [
+    'packages',
+  ]
 }
