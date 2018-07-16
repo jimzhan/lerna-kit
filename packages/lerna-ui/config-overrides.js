@@ -2,6 +2,7 @@ const { injectBabelPlugin } = require('react-app-rewired')
 const rewireLess = require('react-app-rewire-less')
 
 module.exports = (config, env) => {
+  /* eslint-disable no-param-reassign */
   config = injectBabelPlugin(['import', { libraryName: 'antd', style: true }], config)
 
   config = rewireLess.withLoaderOptions({
@@ -9,7 +10,7 @@ module.exports = (config, env) => {
     modifyVars: {
     /* ------- Override Gloabal Ant Styles ---------- */
     },
-  })(config, env);
-
+  })(config, env)
+  /* eslint-enable */
   return config
 }

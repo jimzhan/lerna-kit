@@ -2,7 +2,7 @@
   "name": "lerna-kit",
   "version": "0.1.0",
   "scripts": {
-    "preinstall": "npm install --global autod && autod",
+    "lint": "npx eslint --ext .jsx,.js,.mjs packages",
     "start": "lerna exec -- npm start",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -18,6 +18,7 @@
   },
   "eslintConfig": {
     "root": true,
+    "parser": "babel-eslint",
     "extends": "airbnb",
     "env": {
       "browser": true,
@@ -39,5 +40,26 @@
       "eslint --fix",
       "git add"
     ]
+  },
+  "dependencies": {
+    "cross-env": "~5.2.0",
+    "per-env": "~1.0.2",
+    "rimraf": "~2.6.2"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^7.0.0",
+    "@commitlint/config-conventional": "^7.0.1",
+    "babel-eslint": "^8.2.6",
+    "commitizen": "^2.10.1",
+    "cz-conventional-changelog": "^2.1.0",
+    "eslint": "4.19.1",
+    "eslint-config-airbnb": "^17.0.0",
+    "eslint-plugin-import": "^2.13.0",
+    "eslint-plugin-jest": "^21.17.0",
+    "eslint-plugin-jsx-a11y": "^6.1.1",
+    "eslint-plugin-react": "^7.10.0",
+    "husky": "^0.14.3",
+    "jest": "^23.4.1",
+    "lint-staged": "^7.2.0"
   }
 }

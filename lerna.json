@@ -6,6 +6,5 @@
   "version": "independent",
   "npmClient": "yarn",
   "useGitVersion": true,
-  "gitVersionPrefix": "v",
-  "version": "0.1.0"
+  "gitVersionPrefix": "v"
 }

@@ -7,10 +7,9 @@ import './styles/global.less'
 const ROOT = document.getElementById('root')
 
 const render = () => {
-  ReactDOM.render(
-    <App/>,
-    ROOT
-  )
+  /* eslint-disable react/jsx-filename-extension */
+  ReactDOM.render(<App />, ROOT)
+  /* eslint-enable */
 }
 
 render()

@@ -21,20 +21,20 @@ const Content = styled(Layout.Content)`
 
 const { Header, Footer } = Layout
 
-export default (props) => {
-  return (
-    <Wrapper>
-      <Container>
-        <Header />
-        <Content>
-          <Row type="flex" justify="space-around" align="middle">
-            <Col span={1} />
-            <Col span={10}>{props.children}</Col>
-            <Col span={1} />
-          </Row>
-        </Content>
-        <Footer />
-      </Container>
-    </Wrapper>
-  ) 
-}
+export default ({ children }) => (
+  <Wrapper>
+    <Container>
+      <Header />
+      <Content>
+        <Row type="flex" justify="space-around" align="middle">
+          <Col span={1} />
+          <Col span={10}>
+            {children}
+          </Col>
+          <Col span={1} />
+        </Row>
+      </Content>
+      <Footer />
+    </Container>
+  </Wrapper>
+)
