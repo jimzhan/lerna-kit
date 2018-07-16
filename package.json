@@ -1,6 +1,11 @@
 {
   "name": "lerna-kit",
   "version": "0.1.0",
+  "scripts": {
+    "preinstall": "npm install --global autod && autod",
+    "start": "lerna exec -- npm start",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "commitlint": {
     "extends": [
       "@commitlint/config-conventional"
@@ -13,8 +18,9 @@
   },
   "eslintConfig": {
     "root": true,
-    "extends": "airbnb-base",
+    "extends": "airbnb",
     "env": {
+      "browser": true,
       "node": true,
       "jest/globals": true
     },
@@ -33,21 +39,5 @@
       "eslint --fix",
       "git add"
     ]
-  },
-  "scripts": {
-    "start": "lerna exec -- npm start",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "devDependencies": {
-    "lerna": "^2.11.0"
-  },
-  "dependencies": {
-    "assert": "^1.4.1",
-    "glob": "^7.1.2",
-    "inquirer": "^6.0.0",
-    "is-valid-npm-name": "0.0.4",
-    "shelljs": "^0.8.2",
-    "update-pkg": "^1.2.0",
-    "validate-npm-package-name": "^3.0.0"
   }
 }

@@ -2,10 +2,10 @@
   "name": "@lerna/db",
   "version": "0.1.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/index.mjs",
   "scripts": {
     "preinstall": "autod",
-    "start": "node src/index.js",
+    "start": "node src/index.mjs",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

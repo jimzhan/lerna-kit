@@ -28,21 +28,7 @@ module.exports = Object.assign({
     'rimraf',
   ],
   devdep: [
-    '@commitlint/cli',
-    '@commitlint/config-conventional',
-    'commitizen',
-    'cz-conventional-changelog',
-    'eslint',
-    'eslint-config-airbnb-base',
-    'eslint-plugin-import',
-    'eslint-plugin-jest',
-    'husky',
-    'jest',
-    'lint-staged',
     'nodemon',
     'supertest',
-  ],
-  semver: [
-    'eslint@4.19.1',
   ],
 }, { registry })
