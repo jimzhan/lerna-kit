@@ -1,24 +1,17 @@
 {
-  "name": "@lerna/db",
+  "name": "@lerna/core",
   "version": "0.1.0",
   "description": "",
   "main": "src/index.mjs",
   "scripts": {
     "preinstall": "autod",
-    "start": "node --experimental-modules --no-warnings src/index.mjs",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "boom": "~7.2.0",
-    "chalk": "~2.4.1",
-    "convict-register": "~1.1.1",
-    "cross-env": "~5.2.0",
-    "dataloader": "~1.4.0",
-    "per-env": "~1.0.2",
-    "rimraf": "~2.6.2"
+    "convict-register": "~1.1.1"
   },
   "devDependencies": {
 
