@@ -15,11 +15,13 @@
     ],
     "parserPreset": {
       "parserOpts": {
-        "issuePrefixes": ["JIRA-"]
+        "issuePrefixes": ["#"]
       }
     },
     "rules": {
-      "references-empty": [2, "never"]
+      "references-empty": [2,"never"],
+      "subject-case": [0,"never"],
+      "subject-empty": [2, "never"]
     }
   },
   "config": {
