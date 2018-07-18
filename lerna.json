@@ -1,7 +1,6 @@
 {
   "lerna": "2.11.0",
   "version": "independent",
-  "npmClient": "npm",
-  "useWorkspaces": true,
-  "gitVersionPrefix": "v"
+  "npmClient": "yarn",
+  "useWorkspaces": true
 }
