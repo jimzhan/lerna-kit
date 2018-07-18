@@ -7,7 +7,7 @@
   ],
   "scripts": {
     "preinstall": "npm install --global npx yarn",
-    "postinstall": "npx lerna boostrap",
+    "postinstall": "npx lerna bootstrap",
     "precommit": "lint-staged",
     "commit": "git add . && git-cz",
     "commitmsg": "commitlint -e $GIT_PARAMS",
