@@ -6,6 +6,8 @@
     "packages/*"
   ],
   "scripts": {
+    "preinstall": "npm install --global npx yarn",
+    "postinstall": "npx lerna boostrap",
     "precommit": "lint-staged",
     "commit": "git add . && git-cz",
     "commitmsg": "commitlint -e $GIT_PARAMS",
@@ -65,7 +67,7 @@
     }
   },
   "lint-staged": {
-    "packages/**/*.{mjs,js,jsx}": [
+    "packages/**/*.{js,jsx}": [
       "eslint --fix"
     ]
   },
