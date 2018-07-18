@@ -1,5 +1,5 @@
 {
-  "name": "@lerna/api",
+  "name": "@uni/api",
   "version": "0.1.0",
   "description": "",
   "main": "src/index.mjs",
@@ -35,7 +35,7 @@
     "rimraf": "~2.6.2"
   },
   "devDependencies": {
-    "nodemon": "^1.18.2",
+    "nodemon": "^1.18.3",
     "supertest": "^3.1.0"
   }
 }

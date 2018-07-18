@@ -7,15 +7,15 @@ const shell = require('shelljs')
 const validate = require('is-valid-npm-name')
 const updatePkg = require('update-pkg')
 
-const origin = 'lerna'
+const origin = 'uni'
 const version = '0.1.0'
 const { log } = console
-const basedir = path.resolve(__dirname, '..')
+const basedir = __dirname
 
 /**
  * Get last segment from the given path.
  */
-const getLastSegment = (p) => p.split(path.sep).filter(x => x).slice(-1)[0]
+const getLastSegment = p => p.split(path.sep).filter(x => x).slice(-1)[0]
 
 /**
  * Normalize the given package name to align with `lerna`'s convention. (e.g. @lerna/cli).
@@ -61,13 +61,13 @@ function bootstrap(name) {
 
 
 desc('`lerna-kit` COMMANDS')
-task('default', function() {
-	console.log('COMMANDS')
-	console.log('* jake init - initialize new project')
+task('default', () => {
+  console.log('COMMANDS')
+  console.log('* jake init - initialize new project')
 })
 
 desc('Initialize a new `lerna` project')
-task('init', function() {
+task('init', () => {
   inquirer
     .prompt([
       {

@@ -1,13 +1,17 @@
 {
+  "private": true,
   "name": "lerna-kit",
   "version": "0.1.0",
+  "workspaces": [
+    "packages/*"
+  ],
   "scripts": {
     "precommit": "lint-staged",
     "commit": "git add . && git-cz",
     "commitmsg": "commitlint -e $GIT_PARAMS",
     "lint": "npx eslint --ext .jsx,.js,.mjs packages",
-    "start": "lerna exec -- npm start",
-    "test": "lerna exec -- npm test"
+    "start": "lerna run start",
+    "test": "lerna run test"
   },
   "commitlint": {
     "extends": [
@@ -67,6 +71,7 @@
   },
   "dependencies": {
     "cross-env": "~5.2.0",
+    "lerna": "^2.11.0",
     "per-env": "~1.0.2",
     "rimraf": "~2.6.2"
   },
